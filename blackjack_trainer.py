@@ -86,8 +86,7 @@ class BlackjackTrainer:
         return sum(self.env.return_queue)[0] / sum(self.env.length_queue)[0]
 
     def win_ratio(self) -> float:
-        return 0.91
-        # return mean(1 if r[0] == 1 else 0 for r in self.env.return_queue)
+        return mean(1 if r[0] == 1 else 0 for r in self.env.return_queue)
 
     def play_episode_with_exploitation_only(self):
         """to measure the performance after training"""

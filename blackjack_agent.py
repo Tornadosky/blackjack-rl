@@ -90,6 +90,3 @@ class BlackjackAgent:
         """
         values = [self.q_table.get((state, a), 0) for a in self.actions]
         return self.actions[values.index(max(values))]
-
-
-# Additional methods can be added for specific Blackjack strategies and calculations
